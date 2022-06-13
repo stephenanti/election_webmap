@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Map 2020</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <div class="header" >  
+        <h1>Interactive webmap - 2020 US Presidential elections</h1>   
+    </div>
+ <h3>Stephen Anti</h3>
+ <h4>New York, June, 2022</h4>
+  <p>This is an interactive webmap of the 2020 US Presidential elections. It shows States and Counties and which of the two candidates, Donald J Trump and Joseph R Biden Jr won and by which percentage. Mapbox GL JS is the main JavaScript library powering the interactive map.Joe Biden won the 2020 presidential election with 306 electoral votes against incumbent Donald Trump who had 232 electoral votes. Biden received 81.2 million of the national popular votes and with Trump getting 74.2 million. <br> 
+    <br> Donald Trump refused to acknowledge Biden’s victory, and went ahead to claim that the electioin had been stolen, without providing evidence. He mounted a challenge in court to seek to overturn the election outcome with is baseless claims leading eventually to an attack of the  Capitol by his supporters on January 6, 2021 during a joint session of congress to formally declare the winner of the elections.
+
+  </p>
+
+    <div id='map'></div> 
+
+    <p>The next map is a graduated piont interactive map using the same data of counties, but instead of the state and county polygon layers previously created centroids were introduced.<br>
+    <br>
+    It also shows the election results with categorical attributes. Each win is represented by a circle which is colored according to Democratic and Republican colors. <br>
+     </p>
+    
+    <div id='map2'></div>
+    <script type='text/javascript' src="map.js"></script>
+    
+    <div class ="footer">
+        <footer> copyright &copy 2022</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+// Change the cursor to a pointer when the mouse is over the us_states_elections layer.
+map.on('mouseenter', 'us_states_elections', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'us_states_elections', function () {
+    map.getCanvas().style.cursor = '';
+});
+
+
+
+
+
+map.on('click', 'us_counties_elections', function (e) {
+    var stateName = e.features[0].properties.State;
+    var countyName = e.features[0].properties.County;
+    var winner = e.features[0].properties.Winner;
+    var wnrPerc = e.features[0].properties.WnrPerc;
+    var totalVotes = e.features[0].properties.Total;
+    wnrPerc = (wnrPerc * 100).toFixed(0);
+    totalVotes = totalVotes.toLocaleString();
+    stateName = stateName.toUpperCase();
+    countyName = countyName.toUpperCase();
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<h4>' + countyName + ' - ' + stateName + '</h4>'
+            + '<h2>' + winner + '</h2>'
+            + '<p>' + wnrPerc + '% - (' + totalVotes + ' votes)</p>')
+        .addTo(map);
+});
+map.on('mouseenter', 'us_counties_elections', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'us_counties_elections', function () {
+    map.getCanvas().style.cursor = '';
+});
+
+
+
+
+// Map 3
+
+mapboxgl.accessToken = "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2t4NDN5MDJ2MDJkcTJ2cGFjOGk3MW9jcyJ9.idvR4RaqkBIA5w32u482kw";
+var map3 = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/stephenanti/cl3z5r2wh000014mv98ip2os2",
+  zoom: 3,
+  maxZoom: 9,
+  minZoom: 3.5,
+  center: [-99, 38],
+  maxBounds: [
+    [-180, 15],
+    [-30, 72],
+  ],
+  projection: 'albers',
+});
+
+mapboxgl.accessToken = "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2t4NDN5MDJ2MDJkcTJ2cGFjOGk3MW9jcyJ9.idvR4RaqkBIA5w32u482kw";
+var map3 = new mapboxgl.Map({
+  container: "map3",
+  style: "mapbox://styles/stephenanti/cl3z5r2wh000014mv98ip2os2",
+  zoom: 3,
+  maxZoom: 9,
+  minZoom: 3.5,
+  center: [-99, 38],
+  maxBounds: [
+    [-180, 15],
+    [-30, 72],
+  ],
+  projection: 'albers',
+});
+
+map3.on("load", function () {
+    map3.addLayer({
+        id: "counties_typology",
+        type: "fill",
+        source: {
+          type: "geojson",
+          data: "county_typo.geojson",
+        },
+        paint: {
+            "fill-color": "#B2EBF2 ",
+            "fill-outline-color": "#000000",
+          },
+        });
+      });
+    
+

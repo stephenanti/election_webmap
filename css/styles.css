@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 90%;
+    height: 600px;
+    margin: 5em auto;
+}
+
+#map2 {
+    width: 90%;
+    height: 600px;
+    margin: 5em auto;
+}
+
+#map3 {
+    width: 90%;
+    height: 600px;
+    margin: 5em auto;
+}
+
+.mapboxgl-popup-content h4 {
+    font-weight: 300;
+    font-size: 0.9em;
+    border-width: 0px 0px 0.5px 0px;
+    border-style: solid;
+    border-color: rgb(80, 80, 80);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.mapboxgl-popup-content h2 {
+    font-weight: 500;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+}
+.mapboxgl-popup-content p {
+    font-weight: 300;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
+}
+
+.header {
+    max-width: 50rem;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-family: monospace;
+    max-width: 90%;
+    margin: 3em auto;
+}
+
+h4 {
+    font-family: monospace;
+    max-width: 90%;
+    margin: 3em auto;
+}
+p {
+    font-family: monospace;
+    font-size: large;
+    /* line-height: 1.75em; */
+    max-width: 90%;
+    margin: 3em auto;
+}
+
+
+.par-2 {
+    font-family: monospace;
+    line-height: 1.75em;
+}
+
+.footer {
+    max-width: 50rem;
+    margin: 2rem auto; /* vertical margin and horizontal margin */
+    text-align: center;
+    border-top: solid 1px;
+    border-color: hsl(0, 0%, 50%);
+}
